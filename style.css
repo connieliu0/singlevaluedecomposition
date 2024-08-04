@@ -1,27 +1,27 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 300px; /* Total width of all blocks in a row */
-    height: 200px; /* Total height of all blocks */
-    margin: 0 auto;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px; /* Total width of all blocks in a row */
+  height: 200px; /* Total height of all blocks */
+  margin: 0 auto;
+  margin-top: 30px;
 }
 h2{
-    text-align: center;
+  text-align: center;
 }
 body{
-    background-color: green;
+  background-color: saddlebrown	;
+text-align: center;
 }
-  
-  .block {
-    width: 100px; /* Width of each block */
-    height: 100px; /* Height of each block */
-    background-image: url('cat.avif');
-    background-size: 300px 200px; /* Size of the original image */
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    border: 0px solid white; /* Optional: For visual clarity */
-    filter: blur(0rem) grayscale(0);
-    opacity: 1;
-  }
-  
+
+.block {
+  width: 100px; /* Width of each block */
+  height: 100px; /* Height of each block */
+  background-image: url('https://cdn.glitch.global/3678a983-30a0-4c60-a365-9f52e02da782/tree.jpg?v=1721700704382');
+  background-size: 300px 200px; /* Size of the original image */
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: 0px solid white; /* Optional: For visual clarity */
+  filter: blur(0rem) grayscale(0);
+  opacity: 1;
+}

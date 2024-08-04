@@ -10,8 +10,7 @@ const month = currentDate.getMonth() + 1;
 // Get the day of the month
 const day = currentDate.getDate();
 
-// const currDate = new Date(year+'-'+month+'-'+day);
-const currDate = new Date('2024-12-02');
+const currDate = new Date(year+'-'+month+'-'+day);
 
 
 // number differences
@@ -29,27 +28,28 @@ const differenceInDays = differenceInMilliseconds / millisecondsPerDay;
 let ratio = Math.round((differenceInDays / 182)*100)/100;
 let imgUpload;
 
-document.getElementById('imageInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const img = document.getElementById('displayImage');
-        const dataURL = e.target.result;
-        imgUpload = storedImage;
-        localStorage.setItem('storedImage', dataURL);
-      }
-      reader.readAsDataURL(file);
-    }
-  });
+// document.getElementById('imageInput').addEventListener('change', function(event) {
+//     const file = event.target.files[0];
+//     if (file) {
+//       const reader = new FileReader();
+//       reader.onload = function(e) {
+//         const img = document.getElementById('displayImage');
+//         const dataURL = e.target.result;
+//         imgUpload = storedImage;
+//         localStorage.setItem('storedImage', dataURL);
+//       }
+//       reader.readAsDataURL(file);
+//     }
+//   });
 
-  window.addEventListener('load', function() {
-    const storedImage = localStorage.getItem('storedImage');
-    if (storedImage) {
-      imgUpload = storedImage;
-    }
-  });
-
+//   window.addEventListener('load', function() {
+//     const storedImage = localStorage.getItem('storedImage');
+//     if (storedImage) {
+//       imgUpload = storedImage;
+//     }
+//   });
+var days = document.getElementById('days');
+days.innerHTML = Math.round(differenceInDays) + " days since burial";
 //image block
 const blocks = document.getElementsByClassName('block');
 for (let i = 0; i < blocks.length; i++) {
@@ -57,7 +57,6 @@ for (let i = 0; i < blocks.length; i++) {
     blocks[i].style.border =16*ratio+"px solid white";
     blocks[i].style.opacity =1-1*ratio;
     blocks[i].style.backgroundImage="url("+imgUpload+");"
-
 }
 
 
